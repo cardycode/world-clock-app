@@ -13,13 +13,56 @@
     <title>World Clock</title>
   </head>
   <body>
-    <h1>World Clock</h1>
-    <footer>
-      This project was coded by Carol Morris -
-      <a href="https://github.com/cardycode/world-clock-app"
-        >open sourced on GitHub</a
+    <div class="container">
+      <h1>World Clock</h1>
+      <select
+        name=""
+        id=""
       >
-    </footer>
+        <option value="">Select City...</option>
+        <option value="berlin">Berlin</option>
+        <option value="sydney">Sydney</option>
+        <option value="vancouver">Vancouver</option>
+      </select>
+
+      <div class="cities">
+        <div
+          class="city"
+          id="berlin"
+        >
+          <h2>Berlin</h2>
+          <div class="date">September 23rd, 2023</div>
+          <div class="time">3:51:57 PM</div>
+        </div>
+
+        <div
+          class="city"
+          id="sydney"
+        >
+          <h2>Sydney</h2>
+          <div class="date">September 23rd, 2023</div>
+          <div class="time">3:51:57 PM</div>
+        </div>
+
+        <div
+          class="city"
+          id="vancouver"
+        >
+          <h2>Vancouver</h2>
+          <div class="date">September 23rd, 2023</div>
+          <div class="time">3:51:57 PM</div>
+        </div>
+      </div>
+
+      <footer>
+        This project was coded by Carol Morris -
+        <a
+          href="https://github.com/cardycode/world-clock-app"
+          target="_blank"
+          >open sourced on GitHub</a
+        >
+      </footer>
+    </div>
     <script src="javascript/index.js"></script>
   </body>
 </html>
