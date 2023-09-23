@@ -38,11 +38,12 @@ function updateTime() {
 }
 
 function updateCity(event) {
-  let timeZone = event.target.value;
-  let cityName = timeZone.split("/")[1];
-  let cityTime = moment().tz(timeZone);
-  let citiesElement = document.querySelector(".cities");
-  citiesElement.innerHTML = `<a id = "all-city" href="index.html"> All cities</a><div
+  setInterval(function () {
+    let timeZone = event.target.value;
+    let cityName = timeZone.split("/")[1];
+    let cityTime = moment().tz(timeZone);
+    let citiesElement = document.querySelector(".cities");
+    citiesElement.innerHTML = `<a id = "all-city" href="index.html"> Back to all cities</a><div
           class="city"
           id=""
         >
@@ -56,6 +57,7 @@ function updateCity(event) {
           
         </div>
         `;
+  }, 1000);
 }
 
 updateTime();
