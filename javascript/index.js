@@ -42,7 +42,7 @@ function updateCity(event) {
   let cityName = timeZone.split("/")[1];
   let cityTime = moment().tz(timeZone);
   let citiesElement = document.querySelector(".cities");
-  citiesElement.innerHTML = `<div
+  citiesElement.innerHTML = `<a id = "all-city" href="index.html"> All cities</a><div
           class="city"
           id=""
         >
@@ -53,7 +53,9 @@ function updateCity(event) {
           <div class="time">${cityTime.format(
             "h:mm:ss[<span class='APM'>] A [</span>]"
           )}</div>
-        </div>`;
+          
+        </div>
+        `;
 }
 
 updateTime();
