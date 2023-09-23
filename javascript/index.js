@@ -1,16 +1,21 @@
 function updateTime() {
-  //berlin
+  // current
 
-  let berlinElement = document.querySelector("#berlin");
-  if (berlinElement) {
-    let berlinDateElement = berlinElement.querySelector(".date");
-    let berlinTimeElement = berlinElement.querySelector(".time");
-    let berlinTime = moment().tz("Europe/Berlin");
-    berlinDateElement.innerHTML = berlinTime.format("dddd, MMMM Do YYYY");
-    berlinTimeElement.innerHTML = berlinTime.format(
+  let currentElement = document.querySelector("#current");
+  if (currentElement) {
+    let currentDateElement = currentElement.querySelector(".date");
+    let currentTimeElement = currentElement.querySelector(".time");
+    let currentNameElement = currentElement.querySelector(".current-h2");
+    let currentTimeZone = moment.tz.guess();
+    let currentTime = moment.tz(currentTimeZone);
+    let currentName = currentTimeZone.replace("_", " ").split("/")[1];
+    currentNameElement.innerHTML = currentName;
+    currentDateElement.innerHTML = currentTime.format("dddd, MMMM Do YYYY");
+    currentTimeElement.innerHTML = currentTime.format(
       "h:mm:ss[<span class='APM'>] A [</span>]"
     );
   }
+
   //sydney
 
   let sydneyElement = document.querySelector("#sydney");
